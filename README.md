@@ -1,16 +1,49 @@
 # Data_publication_codebook
+
  Stata program to make a codebook for a directory that contains stata datasets. 
  
  ## Contents:
- This repo contains two main files: "jpal_codebook.do" and "jpal_codebook.ado." The outputs are identical, the difference is just in use. Adding the "ado" file to your personal ado library will make the command "jp_codebook" available to you to run. If you do not want to add the ado file, the do file can be run by itself.
+
+ This repo a command `jpal_codebook` via [`jpal_codebook.ado`](jpal_codebook.ado). 
  
  ## Use:
  
- - ado: run the command "jp_codebook" followed by a string containing the path of the directory you would like to make a codebook for.
- - do: insert a string containing the path of the directory you would like to make a codebook for in the space noted in the first line and then run the entire do-file.
+ - Install the ado file (you can remove it later if you don't want to keep it).
+ - run the command `jp_codebook path_to_dir`, where `path_to_dir` is a string containing the path of the directory you would like to make a codebook for.
  
  ## Output:
  
  - The program outputs an excel file containing a codebook to the current working directory. The excel file has two tabs:
   - "Variables" contains each distinct variable found in the .dta datasets in the specified folder, along with information about it, including but not limited to label, value label, # of distinct values, and mean, median, etc. for numeric variables
-  - "Value labels" contains the value labels used in encoded variables in the dataset, and maps their #s to the underlying values.
+  - "Value labels" contains the value labels used in encoded variables in the dataset, and maps their numbers to the underlying values.
+
+## Installation Instructions
+
+You can install this package directly from GitHub using Stata's `net install` command:
+
+```stata
+global githubbase "https://raw.githubusercontent.com/"
+net install jpal_codebook, from("$githubbase/J-PAL/Data_publication_codebook/main/") replace
+```
+
+Alternatively, if you have downloaded the files locally, navigate to the directory containing the package files and run:
+
+```stata
+net install jpal_codebook, from("`c(pwd)'") replace
+```
+## De-installation (optional)
+
+To uninstall the package, you can use the following command in Stata:
+
+```stata
+ado uninstall jpal_codebook
+```
+
+## Files Included
+
+- `jpal_codebook.ado` - Main program file
+- `jpal_codebook.do` - Alternative do-file version
+- `jpal_codebook.pkg` - Package description file
+- `stata.toc` - Table of contents file
+- `README.md` - Documentation
+- `LICENSE` - MIT License
