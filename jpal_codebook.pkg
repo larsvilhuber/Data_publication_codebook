@@ -1,0 +1,12 @@
+v 3
+d Data Publication Codebook
+d Program to make a codebook for a directory that contains Stata datasets
+d Distribution-Date: 20251217
+d
+d Author: Jack Cavanagh
+d Support: email
+d
+f jpal_codebook.ado
+f jpal_codebook.do
+f README.md
+f LICENSE

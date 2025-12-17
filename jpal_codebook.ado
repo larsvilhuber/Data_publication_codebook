@@ -1,5 +1,11 @@
+*! version 1.0.0  17dec2025
+*! Data Publication Codebook
+*! Author: Jack Cavanagh
+*! Create codebooks for directories containing Stata datasets
+
 capture program drop jp_codebook
 program jp_codebook
+	version 13
 	syntax anything(name=search_directory id="path of directory to search")
 
 

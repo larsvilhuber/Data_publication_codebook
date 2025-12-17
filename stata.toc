@@ -1,0 +1,5 @@
+v 3
+d J-PAL Data Publication Tools
+d This directory contains Stata packages developed by J-PAL
+d
+p jpal_codebook Data Publication Codebook
